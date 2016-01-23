@@ -61,6 +61,27 @@
         resize: true
     });
 
+		Morris.Bar({
+        element: 'morris-bar-chart2',
+        data: [{
+            device: 'Personnel',
+            geekbench: <?php echo $count_mat5; ?>
+        }, {
+            device: 'SSL OV',
+            geekbench: <?php echo $count_mat6; ?>
+        }, {
+            device: 'Cachet server',
+            geekbench: <?php echo $count_mat7; ?>
+        }],
+        xkey: 'device',
+        ykeys: ['geekbench'],
+        labels: ['Vendu'],
+        barRatio: 0.4,
+        xLabelAngle: 35,
+        hideHover: 'auto',
+        resize: true
+    });
+
 	    </script>
 <!-- /Morris Charts JavaScript -->
 
