@@ -70,6 +70,12 @@
 		                                <?php //personnal certificate
 										$query_mat2 = mysql_query("select * from client where certificat_client='Personne physique' ")or die(mysql_error());
 										$count_mat2 = mysql_num_rows($query_mat2);
+										//operateur1
+										$query_mat8 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='7' ")or die(mysql_error());
+							 		 $count_mat8 = mysql_num_rows($query_mat8);
+									 //operateur2
+									 $query_mat9 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='10' ")or die(mysql_error());
+									 $count_mat9 = mysql_num_rows($query_mat9);
 										?>
 
 		                                <div class="span3">
@@ -83,6 +89,12 @@
 		                                <?php //SSL certificate
 										$query_mat3 = mysql_query("select * from client where certificat_client='SSL OV' ")or die(mysql_error());
 										$count_mat3 = mysql_num_rows($query_mat3);
+										//operateur1
+										$query_mat10 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='7' ")or die(mysql_error());
+							 		 $count_mat10 = mysql_num_rows($query_mat10);
+									 //operateur2
+									 $query_mat11 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='10' ")or die(mysql_error());
+									 $count_mat11 = mysql_num_rows($query_mat11);
 										?>
 
 		                                <div class="span3">
@@ -97,6 +109,12 @@
 		                                <?php //Stamp certificate
 										$query_mat4 = mysql_query("select * from client where certificat_client='Cachet serveur' ")or die(mysql_error());
 										$count_mat4 = mysql_num_rows($query_mat4);
+										//operateur1
+										$query_mat12 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='7' ")or die(mysql_error());
+							 		 $count_mat12 = mysql_num_rows($query_mat12);
+									 //operateur2
+									 $query_mat13 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='10' ")or die(mysql_error());
+									 $count_mat13 = mysql_num_rows($query_mat13);
 										?>
 
 		                                <div class="span3">
@@ -140,9 +158,14 @@
 
 							        	<!--Total in wallet-->
 							        	<?php
+												//calcul of total operation
 							        	$person_cost = $count_mat2*$cost_Pers;
 							        	$sslov_cost  = $count_mat3*$cost_SSL;
 							        	$server_cost = $count_mat4*$cost_Serv;
+
+												//cacul total sell for operateur1
+
+												//calcul total sell for operateur2
 
 							        	$total_cert  = $count_mat2+$count_mat3+$count_mat4;
 							        	?>
