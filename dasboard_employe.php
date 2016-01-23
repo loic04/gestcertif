@@ -8,9 +8,9 @@
                 <!--/span-->
                 <div class="span9" id="content">
 						<div class="row-fluid"></div>
-						
+
                     <div class="row-fluid">
-            
+
                         <!-- block RESUME -->
 
 
@@ -18,16 +18,16 @@
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left"> RESUME DES OPERATIONS SUR LA PLATEFORME</div>
                             </div>
-                            
+
                             <div class="block-content collapse in">
 							        <div class="span12">
 							        	<!--Statistiques about clients-->
 
-											<?php 
+											<?php
 										$query_mat = mysql_query("select * from client ")or die(mysql_error());
 										$count_mat = mysql_num_rows($query_mat);
 										?>
-										
+
 		                                <div class="span3">
 		                                    <div class="chart" data-percent="<?php echo $count_mat; ?>"><?php echo $count_mat; ?></div>
 		                                    <div class="chart-bottom-heading"><strong>Nombre de Clients</strong>
@@ -39,29 +39,29 @@
 							        	<!--Variables of cost-->
 							        	<?php
 							        	//Personnal
-							        	$query_price_person = mysql_query("select * from certificat where libelle_cert='Personne physique' ")or die(mysql_error());
+							      $query_price_person = mysql_query("select * from certificat where libelle_cert='Personne physique' ")or die(mysql_error());
 										$row                = mysql_fetch_array($query_price_person);
 										$cost_Pers          = $row['prix_cert'];
 
 										//SSLOV
-							        	$query_price_person = mysql_query("select * from certificat where libelle_cert='SSL OV' ")or die(mysql_error());
+							      $query_price_person = mysql_query("select * from certificat where libelle_cert='SSL OV' ")or die(mysql_error());
 										$row                = mysql_fetch_array($query_price_person);
 										$cost_SSL           = $row['prix_cert'];
 
 										//Stamp server
-							        	$query_price_person = mysql_query("select * from certificat where libelle_cert='Cachet serveur' ")or die(mysql_error());
+							      $query_price_person = mysql_query("select * from certificat where libelle_cert='Cachet serveur' ")or die(mysql_error());
 										$row                = mysql_fetch_array($query_price_person);
 										$cost_Serv          = $row['prix_cert'];
 										?>
 							        	<!--/Variables of cost-->
 
 							        	<!--Statistiques about our certificates-->
-							        		
+
 		                                <?php //personnal certificate
 										$query_mat2 = mysql_query("select * from client where certificat_client='Personne physique' ")or die(mysql_error());
 										$count_mat2 = mysql_num_rows($query_mat2);
 										?>
-										
+
 		                                <div class="span3">
 		                                    <div class="chart" data-percent="<?php echo $count_mat2; ?>"><?php echo $count_mat2; ?></div>
 		                                    <div class="chart-bottom-heading"><strong>Certificat personne</strong>
@@ -74,7 +74,7 @@
 										$query_mat3 = mysql_query("select * from client where certificat_client='SSL OV' ")or die(mysql_error());
 										$count_mat3 = mysql_num_rows($query_mat3);
 										?>
-										
+
 		                                <div class="span3">
 		                                    <div class="chart" data-percent="<?php echo $count_mat3; ?>"><?php echo $count_mat3; ?></div>
 		                                    <div class="chart-bottom-heading"><strong>Certificat SSL OV</strong>
@@ -88,7 +88,7 @@
 										$query_mat4 = mysql_query("select * from client where certificat_client='Cachet serveur' ")or die(mysql_error());
 										$count_mat4 = mysql_num_rows($query_mat4);
 										?>
-										
+
 		                                <div class="span3">
 		                                    <div class="chart" data-percent="<?php echo $count_mat4; ?>"><?php echo $count_mat4; ?></div>
 		                                    <div class="chart-bottom-heading"><strong>Certificat Cachet serveur</strong>
@@ -131,22 +131,22 @@
 
 							        	</div>
 							        	<!--/total in wallet-->
-						
-						
+
+
                                    </div>
                            </div>
-                    
+
                         <!-- /block -->
-						
+
                     </div>
                     </div>
-                
-                
-                 
-                 
+
+
+
+
                 </div>
             </div>
-    
+
          <?php include('footer1.php'); ?>
         </div>
 	<?php include('script.php'); ?>
