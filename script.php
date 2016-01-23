@@ -20,6 +20,23 @@
 		<?php //Stamp certificate
 		$query_mat4 = mysql_query("select * from client where certificat_client='Cachet serveur' and enregistr_par='7' ")or die(mysql_error());
 		$count_mat4 = mysql_num_rows($query_mat4);
+
+		//Graph about operateur2
+
+		<?php //personnal certificate
+		mysql_select_db('gestcertdkb',mysql_connect('localhost','root',''))or die(mysql_error());
+	$query_mat5 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='10' ")or die(mysql_error());
+	$count_mat5 = mysql_num_rows($query_mat5);
+	?>
+
+	<?php //SSL certificate
+ $query_mat6 = mysql_query("select * from client where certificat_client='SSL OV' and enregistr_par='10' ")or die(mysql_error());
+ $count_mat6 = mysql_num_rows($query_mat6);
+ ?>
+
+ <?php //Stamp certificate
+ $query_mat7 = mysql_query("select * from client where certificat_client='Cachet serveur' and enregistr_par='10' ")or die(mysql_error());
+ $count_mat7 = mysql_num_rows($query_mat7);
 		?>
 
 
