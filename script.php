@@ -24,7 +24,6 @@
 		//Graph about operateur2
 
 		<?php //personnal certificate
-		mysql_select_db('gestcertdkb',mysql_connect('localhost','root',''))or die(mysql_error());
 	$query_mat5 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='10' ")or die(mysql_error());
 	$count_mat5 = mysql_num_rows($query_mat5);
 	?>
