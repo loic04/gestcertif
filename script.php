@@ -4,6 +4,7 @@
 
 	    <script>
 	     // Bar Chart data
+			 //Graph about operateur1
 
 	     <?php //personnal certificate
 	     mysql_select_db('gestcertdkb',mysql_connect('localhost','root',''))or die(mysql_error());

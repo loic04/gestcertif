@@ -57,6 +57,11 @@
 										$query_name_operateur1 = mysql_query("select * from employe where EMP_ID='7' ")or die(mysql_error());
 										$row                = mysql_fetch_array($query_name_operateur1);
 										$name_operateur1          = $row['EMP_NOM'];
+
+
+										$query_name_operateur2 = mysql_query("select * from employe where EMP_ID='10' ")or die(mysql_error());
+										$row                = mysql_fetch_array($query_name_operateur2);
+										$name_operateur2          = $row['EMP_NOM'];
 										?>
 							        	<!--/Variables of cost-->
 
@@ -104,7 +109,7 @@
 
 							        	<!--/Statistiques about our certifcates-->
 
-							        	<!--Diagram certificates-->
+							        	<!--Diagram operateurs-->
 							        	<div class="span5">
 							        		<div class="panel panel-primary">
 					                            <div class="panel-heading">
@@ -118,6 +123,20 @@
 					                              </div>
 					                         </div>
 					                    </div>
+
+															<div class="span5">
+										        		<div class="panel panel-primary">
+								                            <div class="panel-heading">
+								                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Graph de <?php echo $name_operateur2; ?></h3>
+								                            </div>
+								                            <div class="panel-body">
+								                                <div id="morris-bar-chart2"></div>
+								                                <div class="text-right">
+								                                    <a data-toggle="modal"  id="delete"  class="btn btn-danger" name=""  target="_blank" href="#">><i class="icon-print"></i></a>
+								                                </div>
+								                              </div>
+								                         </div>
+								                    </div>
 
 							        	<!--/Diagram certificates-->
 
