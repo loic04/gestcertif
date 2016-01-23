@@ -127,36 +127,7 @@
 
 							        	<!--/Statistiques about our certifcates-->
 
-							        	<!--Diagram operateurs-->
-							        	<div class="span5">
-							        		<div class="panel panel-primary">
-					                            <div class="panel-heading">
-					                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Graph de <?php echo $name_operateur1; ?></h3>
-					                            </div>
-					                            <div class="panel-body">
-					                                <div id="morris-bar-chart"></div>
-					                                <div class="text-right">
-					                                </div>
-					                              </div>
-					                         </div>
-					                    </div>
-
-															<div class="span5">
-										        		<div class="panel panel-primary">
-								                            <div class="panel-heading">
-								                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Graph de <?php echo $name_operateur2; ?></h3>
-								                            </div>
-								                            <div class="panel-body">
-								                                <div id="morris-bar-chart2"></div>
-								                                <div class="text-right">
-								                                </div>
-								                              </div>
-								                         </div>
-								                    </div>
-
-							        	<!--/Diagram certificates-->
-
-							        	<!--Total in wallet-->
+												<!--Total in wallet-->
 							        	<?php
 												//calcul of total operation
 							        	$person_cost = $count_mat2*$cost_Pers;
@@ -180,13 +151,45 @@
 												$caisse_op2 = $person_cost_op2+$sslov_cost_op2+$server_cost_op2;
 
 							        	?>
+												<!--/total in wallet-->
 
-							        	<!--<div class="span6">
+
+							        	<!--Diagram operateurs-->
+							        	<div class="span5">
+							        		<div class="panel panel-primary">
+					                            <div class="panel-heading">
+					                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Graph de <?php echo $name_operateur1; ?>/vendu:<?php echo $total_cert_op1; ?>/caisse:<?php echo $caisse_op1; ?>FCFA</h3>
+					                            </div>
+					                            <div class="panel-body">
+					                                <div id="morris-bar-chart"></div>
+					                                <div class="text-right">
+					                                </div>
+					                              </div>
+					                         </div>
+					                    </div>
+
+															<div class="span5">
+										        		<div class="panel panel-primary">
+								                            <div class="panel-heading">
+								                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Graph de <?php echo $name_operateur2; ?>/vendu:<?php echo $total_cert_op2; ?>/caisse:<?php echo $caisse_op2; ?>FCFA</h3>
+								                            </div>
+								                            <div class="panel-body">
+								                                <div id="morris-bar-chart2"></div>
+								                                <div class="text-right">
+								                                </div>
+								                              </div>
+								                         </div>
+								                    </div>
+
+							        	<!--/Diagram certificates-->
+
+
+												<div class="span6">
 			        		            <h1>Vendu: <?php echo $total_cert; ?> certificats</h1>
 			        					<h1>Caisse: <?php echo $caisse_Total; ?> FCFA</h1>
 
-											</div>-->
-							        	<!--/total in wallet-->
+											</div>
+
 
 
                                    </div>
