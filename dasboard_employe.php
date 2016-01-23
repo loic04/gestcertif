@@ -147,11 +147,11 @@
 							        	$total_cert  = $count_mat2+$count_mat3+$count_mat4;
 							        	?>
 
-							        	<div class="span6">
+							        	<!--<div class="span6">
 			        		            <h1>Vendu: <?php echo $total_cert; ?> certificats</h1>
 			        					<h1>Caisse: <?php echo $person_cost+$sslov_cost+$server_cost; ?> FCFA</h1>
 
-							        	</div>
+											</div>-->
 							        	<!--/total in wallet-->
 
 
