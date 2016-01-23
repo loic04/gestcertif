@@ -52,6 +52,11 @@
 							      $query_price_person = mysql_query("select * from certificat where libelle_cert='Cachet serveur' ")or die(mysql_error());
 										$row                = mysql_fetch_array($query_price_person);
 										$cost_Serv          = $row['prix_cert'];
+
+										//Get name of operateur
+										$query_name_operateur1 = mysql_query("select * from employe where EMP_ID='7' ")or die(mysql_error());
+										$row                = mysql_fetch_array($query_name_operateur1);
+										$name_operateur1          = $row['EMP_NOM'];
 										?>
 							        	<!--/Variables of cost-->
 
@@ -103,7 +108,7 @@
 							        	<div class="span5">
 							        		<div class="panel panel-primary">
 					                            <div class="panel-heading">
-					                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Bar Graph Example</h3>
+					                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Graph de <?php echo $name_operateur1; ?></h3>
 					                            </div>
 					                            <div class="panel-body">
 					                                <div id="morris-bar-chart"></div>
