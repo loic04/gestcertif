@@ -162,17 +162,28 @@
 							        	$person_cost = $count_mat2*$cost_Pers;
 							        	$sslov_cost  = $count_mat3*$cost_SSL;
 							        	$server_cost = $count_mat4*$cost_Serv;
+											  $total_cert  = $count_mat2+$count_mat3+$count_mat4;
+												$caisse_Total = $person_cost+$sslov_cost+$server_cost;
 
-												//cacul total sell for operateur1
+												//cacul total sell for operateur1 (8µ10µ12)
+												$person_cost_op1 = $count_mat8*$cost_Pers;
+												$sslov_cost_op1  = $count_mat10*$cost_SSL;
+												$server_cost_op1 = $count_mat12*$cost_Serv;
+												$total_cert_op1  = $count_mat8+$count_mat10+$count_mat12;
+												$caisse_op1      = $person_cost_op1+$sslov_cost_op1+$server_cost_op1;
 
-												//calcul total sell for operateur2
+												//calcul total sell for operateur2 (9µ11µ13)
+												$person_cost_op2 = $count_mat9*$cost_Pers;
+												$sslov_cost_op2  = $count_mat11*$cost_SSL;
+												$server_cost_op2 = $count_mat13*$cost_Serv;
+												$total_cert_op2 =  $count_mat9+$count_mat11+$count_mat13;
+												$caisse_op2 = $person_cost_op2+$sslov_cost_op2+$server_cost_op2;
 
-							        	$total_cert  = $count_mat2+$count_mat3+$count_mat4;
 							        	?>
 
 							        	<!--<div class="span6">
 			        		            <h1>Vendu: <?php echo $total_cert; ?> certificats</h1>
-			        					<h1>Caisse: <?php echo $person_cost+$sslov_cost+$server_cost; ?> FCFA</h1>
+			        					<h1>Caisse: <?php echo $caisse_Total; ?> FCFA</h1>
 
 											</div>-->
 							        	<!--/total in wallet-->
