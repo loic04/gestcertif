@@ -7,17 +7,17 @@
 
 	     <?php //personnal certificate
 	     mysql_select_db('gestcertdkb',mysql_connect('localhost','root',''))or die(mysql_error());
-		 $query_mat2 = mysql_query("select * from client where certificat_client='Personne physique' ")or die(mysql_error());
+		 $query_mat2 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='7' ")or die(mysql_error());
 		 $count_mat2 = mysql_num_rows($query_mat2);
 		 ?>
 
 		 <?php //SSL certificate
-		$query_mat3 = mysql_query("select * from client where certificat_client='SSL OV' ")or die(mysql_error());
+		$query_mat3 = mysql_query("select * from client where certificat_client='SSL OV' and enregistr_par='7' ")or die(mysql_error());
 		$count_mat3 = mysql_num_rows($query_mat3);
 		?>
 
 		<?php //Stamp certificate
-		$query_mat4 = mysql_query("select * from client where certificat_client='Cachet serveur' ")or die(mysql_error());
+		$query_mat4 = mysql_query("select * from client where certificat_client='Cachet serveur' and enregistr_par='7' ")or die(mysql_error());
 		$count_mat4 = mysql_num_rows($query_mat4);
 		?>
 
@@ -45,7 +45,7 @@
 
 	    </script>
 <!-- /Morris Charts JavaScript -->
-        
+
         <script src="admin/bootstrap/js/bootstrap.min.js"></script>
         <script src="admin/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
         <script src="admin/assets/scripts.js"></script>
@@ -57,15 +57,15 @@
 				</script>
 			<!-- data table -->
 		<script src="admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
-        <script src="admin/assets/DT_bootstrap.js"></script>		
+        <script src="admin/assets/DT_bootstrap.js"></script>
 			<!-- jgrowl -->
-		<script src="admin/vendors/jGrowl/jquery.jgrowl.js"></script>   
+		<script src="admin/vendors/jGrowl/jquery.jgrowl.js"></script>
 				<script>
 				$(function() {
-					$('.tooltip').tooltip();	
-					$('.tooltip-left').tooltip({ placement: 'left' });	
-					$('.tooltip-right').tooltip({ placement: 'right' });	
-					$('.tooltip-top').tooltip({ placement: 'top' });	
+					$('.tooltip').tooltip();
+					$('.tooltip-left').tooltip({ placement: 'left' });
+					$('.tooltip-right').tooltip({ placement: 'right' });
+					$('.tooltip-top').tooltip({ placement: 'top' });
 					$('.tooltip-bottom').tooltip({ placement: 'bottom' });
 					$('.popover-left').popover({placement: 'left', trigger: 'hover'});
 					$('.popover-right').popover({placement: 'right', trigger: 'hover'});
@@ -134,5 +134,3 @@
 							});
 						});
 						</script>
-
-						
