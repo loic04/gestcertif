@@ -20,10 +20,23 @@
 		<?php //Stamp certificate
 		$query_mat4 = mysql_query("select * from client where certificat_client='Cachet serveur' and enregistr_par='7' ")or die(mysql_error());
 		$count_mat4 = mysql_num_rows($query_mat4);
-
-		//Graph about operateur2
-		
 		?>
+//Graph about operateur2
+
+<?php //personnal certificate
+$query_mat5 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='10' ")or die(mysql_error());
+$count_mat5 = mysql_num_rows($query_mat5);
+?>
+
+<?php //SSL certificate
+$query_mat6 = mysql_query("select * from client where certificat_client='SSL OV' and enregistr_par='10' ")or die(mysql_error());
+$count_mat6 = mysql_num_rows($query_mat6);
+?>
+
+<?php //Stamp certificate
+$query_mat7 = mysql_query("select * from client where certificat_client='Cachet serveur' and enregistr_par='10' ")or die(mysql_error());
+$count_mat7 = mysql_num_rows($query_mat7);
+?>
 
 
     Morris.Bar({
@@ -37,6 +50,27 @@
         }, {
             device: 'Cachet server',
             geekbench: <?php echo $count_mat4; ?>
+        }],
+        xkey: 'device',
+        ykeys: ['geekbench'],
+        labels: ['Vendu'],
+        barRatio: 0.4,
+        xLabelAngle: 35,
+        hideHover: 'auto',
+        resize: true
+    });
+
+		Morris.Bar({
+        element: 'morris-bar-chart2',
+        data: [{
+            device: 'Personnel',
+            geekbench: <?php echo $count_mat5; ?>
+        }, {
+            device: 'SSL OV',
+            geekbench: <?php echo $count_mat6; ?>
+        }, {
+            device: 'Cachet server',
+            geekbench: <?php echo $count_mat7; ?>
         }],
         xkey: 'device',
         ykeys: ['geekbench'],
