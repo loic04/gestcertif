@@ -118,7 +118,6 @@
 					                            <div class="panel-body">
 					                                <div id="morris-bar-chart"></div>
 					                                <div class="text-right">
-					                                    <a data-toggle="modal"  id="delete"  class="btn btn-danger" name=""  target="_blank" href="#">><i class="icon-print"></i></a>
 					                                </div>
 					                              </div>
 					                         </div>
@@ -132,7 +131,6 @@
 								                            <div class="panel-body">
 								                                <div id="morris-bar-chart2"></div>
 								                                <div class="text-right">
-								                                    <a data-toggle="modal"  id="delete"  class="btn btn-danger" name=""  target="_blank" href="#">><i class="icon-print"></i></a>
 								                                </div>
 								                              </div>
 								                         </div>
