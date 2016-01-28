@@ -90,10 +90,10 @@
 										$query_mat3 = mysql_query("select * from client where certificat_client='SSL OV' ")or die(mysql_error());
 										$count_mat3 = mysql_num_rows($query_mat3);
 										//operateur1
-										$query_mat10 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='7' ")or die(mysql_error());
+										$query_mat10 = mysql_query("select * from client where certificat_client='SSL OV' and enregistr_par='7' ")or die(mysql_error());
 							 		 $count_mat10 = mysql_num_rows($query_mat10);
 									 //operateur2
-									 $query_mat11 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='10' ")or die(mysql_error());
+									 $query_mat11 = mysql_query("select * from client where certificat_client='SSL OV' and enregistr_par='10' ")or die(mysql_error());
 									 $count_mat11 = mysql_num_rows($query_mat11);
 										?>
 
@@ -110,10 +110,10 @@
 										$query_mat4 = mysql_query("select * from client where certificat_client='Cachet serveur' ")or die(mysql_error());
 										$count_mat4 = mysql_num_rows($query_mat4);
 										//operateur1
-										$query_mat12 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='7' ")or die(mysql_error());
+										$query_mat12 = mysql_query("select * from client where certificat_client='Cachet serveur' and enregistr_par='7' ")or die(mysql_error());
 							 		 $count_mat12 = mysql_num_rows($query_mat12);
 									 //operateur2
-									 $query_mat13 = mysql_query("select * from client where certificat_client='Personne physique' and enregistr_par='10' ")or die(mysql_error());
+									 $query_mat13 = mysql_query("select * from client where certificat_client='Cachet serveur' and enregistr_par='10' ")or die(mysql_error());
 									 $count_mat13 = mysql_num_rows($query_mat13);
 										?>
 
