@@ -158,7 +158,13 @@
 							        	<div class="span5">
 							        		<div class="panel panel-primary">
 					                            <div class="panel-heading">
-					                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Graph de <?php echo $name_operateur1; ?>/vendu:<?php echo $total_cert_op1; ?>/caisse:<?php echo $caisse_op1; ?>FCFA</h3>
+					                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i><?php echo $name_operateur1; ?></h3>
+																					<div class="row">
+																					<h4>Vendu: <?php echo $total_cert_op1; ?> certificats</h4>
+																					</div>
+																					<div class="row">
+																					<h4>Caisse: <?php echo $caisse_op1; ?> FCFA</h4>
+																					</div>
 					                            </div>
 					                            <div class="panel-body">
 					                                <div id="morris-bar-chart"></div>
@@ -171,7 +177,13 @@
 															<div class="span5">
 										        		<div class="panel panel-primary">
 								                            <div class="panel-heading">
-								                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Graph de <?php echo $name_operateur2; ?>/vendu:<?php echo $total_cert_op2; ?>/caisse:<?php echo $caisse_op2; ?>FCFA</h3>
+								                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i><?php echo $name_operateur2; ?></h3>
+																								<div class="row">
+																								<h4>Vendu: <?php echo $total_cert_op2; ?> certificats</h4>
+																								</div>
+																								<div class="row">
+																								<h4>Caisse: <?php echo $caisse_op2; ?> FCFA</h4>
+																								</div>
 								                            </div>
 								                            <div class="panel-body">
 								                                <div id="morris-bar-chart2"></div>
@@ -185,8 +197,8 @@
 
 
 												<div class="span6">
-			        		            <h1>Vendu: <?php echo $total_cert; ?> certificats</h1>
-			        					<h1>Caisse: <?php echo $caisse_Total; ?> FCFA</h1>
+			        		            <h1>Total Vendu: <?php echo $total_cert; ?> certificats</h1>
+			        					<h1>Total Caisse: <?php echo $caisse_Total; ?> FCFA</h1>
 
 											</div>
 
